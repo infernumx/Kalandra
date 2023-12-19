@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kalandra</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <script>
+        const { remote } = require('electron');
+    </script>
+
+    <script src="js/helpers.js"></script>
+    <script src="js/modal.js"></script>
+
+    <link rel="stylesheet" href="auth-stylesheet.css">
+</head>
+
+
+<body>
+    <div class="cfg-div">
+        <label class="cfg-label">Display Name</label>
+        <input id="displayName" class="cfg-input">
+    </div>
+    <div class="cfg-div">
+        <label class="cfg-label">Identifier</label>
+        <input id="identifier" class="cfg-input">
+    </div>
+    <div class="cfg-div">
+        <label class="cfg-label">Offer Currency</label>
+        <input id="offerCurrency" class="cfg-input">
+    </div>
+    <div class="cfg-div">
+        <label class="cfg-label">Offer Price</label>
+        <input id="offerPrice" class="cfg-input">
+    </div>
+    <div class="cfg-div">
+        <label class="cfg-label">Mininum Stock</label>
+        <input id="minStock" class="cfg-input">
+    </div>
+    <div class="cfg-div">
+        <label class="cfg-label">Maximum Stock</label>
+        <input id="maxStock" class="cfg-input">
+    </div>
+    <div class="cfg-div">
+        <label class="cfg-label">Maximum Price</label>
+        <input id="maxPrice" class="cfg-input">
+    </div>
+    <div class="cfg-div">
+        <label class="cfg-label">Expiration</label>
+        <input id="expire" class="cfg-input">
+    </div>
+
+    <div class="cfg-div">
+        <label class="cfg-label">Fetch Exchange</label>
+        <input id="fetchExchange" type="checkbox" class="cfg-input-checkbox">
+    </div>
+    <div class="cfg-div">
+        <label class="cfg-label">Auto Whisper</label>
+        <input id="autoWhisper" type="checkbox" class="cfg-input-checkbox">
+    </div>
+    <div class="cfg-div">
+        <label class="cfg-label">Disabled</label>
+        <input id="disabled" type="checkbox" class="cfg-input-checkbox">
+    </div>
+
+    <div class="cfg-div">
+        <button id="delete" class="cfg-delete" onclick="deleteFilter()">Delete</button>
+        <button id="save" class="cfg-save" onclick="saveFilter()">Save</button>
+    </div>
+</body>
+
+</html>

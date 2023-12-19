@@ -1,0 +1,22 @@
+{
+    "general": {
+        "league": "Ancestor",
+        "sessid": "3b0bbfcf4533279878a81bb817cbae92",
+        "auth": "",
+        "whisperPaste": true
+    },
+    "filters": {
+        "lG05PaQHV": {
+            "displayName": "Exotic Coinage",
+            "offerCurrency": "chaos",
+            "offerPrice": 4,
+            "minStock": 1,
+            "maxStock": 99,
+            "maxPrice": 4,
+            "expire": 30,
+            "fetchExchange": true,
+            "autoWhisper": true,
+            "disabled": false
+        }
+    }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Kalandra</title>
+	<meta http-equiv="Content-Security-Policy"
+		content="script-src 'self' https://kit.fontawesome.com/edd19cd5cd.js 'unsafe-inline';" />
+
+	<script src="https://kit.fontawesome.com/edd19cd5cd.js" crossorigin="anonymous"></script>
+	<script>window.$ = window.jQuery = require('jquery');</script>
+	<script>
+		const io = require("socket.io-client");
+		const { remote } = require('electron');
+	</script>
+
+	<script src="js/helpers.js"></script>
+	<script src="js/keyboard.js"></script>
+	<script src="js/websocket.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/connector.js"></script>
+	<link rel="stylesheet" href="stylesheet.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+
+<body>
+	<div class="sidebar">
+		<a href="#" id="listings-button"><i class="fa fa-list"></i>Listings</a>
+		<a href="#" id="websockets-button"><i class="fa fa-globe"></i>Websockets</a>
+		<a href="#" id="config-button" onclick="openConfigTab('general')"><i class="fa fa-cogs"></i>Config</a>
+		<a href="#" id="log-button"><i class="fa fa-history"></i>Log</a>
+		<a href="#" id="whisper-all" onclick="whisperAll()">Whisper All</a>
+		<a href="#" id="whisper-toggle" onclick="toggleAutoWhisper()">Toggle AutoWhisper</a>
+		<div class="sidebar-footer">
+			<a href="https://github.com/infernumx" onclick="openLink()"><i class="fa fa-github fa-lg"></i></a>
+		</div>
+		<div class="sidebar-version">
+			<h3 id="version-text"></h3>
+		</div>
+	</div>
+	<div class="main">
+		<div id="listings" class="listings" style="display: block">
+			<table class="listing-table">
+				<thead>
+					<th>Item</th>
+					<th>B/O</th>
+					<th>Qty</th>
+					<th>IGN</th>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+		<div id="websockets" class="websockets" style="display: none">
+			<table class="ws-table">
+				<thead>
+					<th>Identifier</th>
+					<th>Name</th>
+					<th>Status</th>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+		<div id="config" class="config" style="display: none">
+			<button class="cfg-general tablink" onclick="openConfigTab('general')">General</button>
+			<button class="cfg-filters tablink" onclick="openConfigTab('filters')">Filters</button>
+			<div id="config-general" class="tabcontent" style="display: none">
+				<div class="cfg-div">
+					<label class="cfg-label">Session ID</label>
+					<input id="sessid-input" class="cfg-input">
+				</div>
+				<div class="cfg-div">
+					<label class="cfg-label">League</label>
+					<input id="league-input" class="cfg-input">
+				</div>
+			</div>
+			<div id="config-filters" class="tabcontent" style="display: none">
+				<table id="filters-table" class="filters-table">
+					<tbody id="filters-table-body">
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div id="log" class="logger" style="display: none">
+
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+body {
+    background: #0b0d12;
+    font-family: "Consolas", sans-serif;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+}
+
+p {
+    color: rgb(233, 233, 233);
+    font-size: 36px;
+    text-align: center;
+    width: inherit;
+    word-wrap: normal;
+}
+
+.cfg-div {
+    display: block;
+    padding-bottom: 3px;
+}
+  
+.cfg-label {
+    font-size: 16px;
+    width: 150px;
+    color:rgb(233, 233, 233);
+    text-align: center;
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.cfg-input {
+    align-self: center;
+    width: 150px;
+}
+
+.cfg-input-checkbox {
+    align-self: center;
+    margin-left: -1px;
+}
+
+.cfg-save {
+    float: right;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.cfg-delete {
+    float: right;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}

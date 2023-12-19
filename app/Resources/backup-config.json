@@ -1,0 +1,33 @@
+{
+    "general": {
+        "league": "Archnemesis",
+        "sessid": "79d596490e141d0da7aa9bd3a03be1f8",
+        "auth": "",
+        "whisperPaste": true
+    },
+    "filters": {
+        "e602K4cL": {
+            "displayName": "Jagged",
+            "fetchExchange": true,
+            "autoWhisper": false,
+            "offerCurrency": "chaos",
+            "offerPrice": 1,
+            "minStock": 1,
+            "maxPrice": 1,
+            "expire": 30,
+            "disabled": true
+        },
+        "3XpWP3KI5": {
+            "displayName": "Exp Scarab",
+            "fetchExchange": true,
+            "autoWhisper": false,
+            "offerCurrency": "chaos",
+            "offerPrice": 8,
+            "minStock": 1,
+            "maxStock": 10,
+            "maxPrice": 8,
+            "expire": 30,
+            "disabled": false
+        }
+    }
+}
